@@ -1,2 +1,7 @@
 ﻿  Project2.cpp
+D:\Git_rep\New prac\C-\Project2\Project2.cpp(26,13): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\Git_rep\New prac\C-\Project2\Project2.cpp(30,12): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\Git_rep\New prac\C-\Project2\Project2.cpp(34,13): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\Git_rep\New prac\C-\Project2\Project2.cpp(38,12): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\Git_rep\New prac\C-\Project2\Project2.cpp(40,13): warning C4244: =: преобразование "double" в "int", возможна потеря данных
   Project2.vcxproj -> D:\Git_rep\New prac\C-\Project2\x64\Debug\Project2.exe
