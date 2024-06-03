@@ -3,55 +3,65 @@
 #include <algorithm> 
 using namespace std;
 
-class player
+
+class Animals
 {
-	string name;
-	int points = 0;
 public:
-	friend bool point_sorter(const player&, const player&);
-	string get_name()const 
+	virtual string Voice()
 	{
-		return name; 
-	}
-	int get_points()const 
-	{ 
-		return points; 
-	}
-	void set_name(string n) 
-	{ 
-		name = n; 
-	}
-	void set_points(int n) 
-	{ 
-		points = n; 
+		string V = "Text";
+		std::cout << V;
+		return V;
 	}
 };
-bool point_sorter(const player& l, const player& r)
+class Dog : public Animals
 {
-	return l.points > r.points;
-}
-int main() {
-	size_t P_numbr;
-	cout << "insert number of players ";
-	cin >> P_numbr;
-
-	player* players = new player[P_numbr];
-	for (size_t i = 0; i < P_numbr; i++)
+public:
+	string Voice() override
 	{
-		string name;
-		int point;
-		cout << "Insert name of player " << i+1 << " (name points):";
-		cin >> name >> point;
-		players[i].set_name(name);
-		players[i].set_points(point);
+		string V = "Woof!\n";
+		std::cout << V;
+		return V;
 	}
-
-	sort(players, players + P_numbr, point_sorter);
-	for (size_t i = 0; i < P_numbr; i++)
+};
+class Cat : public Animals
+{
+public:
+	string Voice() override
 	{
-		cout << players[i].get_name() << " " << players[i].get_points() << '\n';
+		string V = "Meow\n";
+		std::cout << V;
+		return V;
 	}
-
-	delete[] players;
+};
+class Cow : public Animals
+{
+public:
+	string Voice() override
+	{
+		string V = "Mooo\n";
+		std::cout << V;
+		return V;
+	}
+};
+class Racoon : public Animals
+{
+public:
+	string Voice() override
+	{
+		string V = "FRFRFRFR\n";
+		std::cout << V;
+		return V;
+	}
+};
+int main()
+{
+	Dog* dog = new Dog;
+	Cat* cat = new Cat;
+	Cow* cow = new Cow;
+	Racoon* rac = new Racoon;
+	dog->Voice();
+	cat->Voice();
+	cow->Voice();
+	rac->Voice();
 }
-
